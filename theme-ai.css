@@ -1,0 +1,31 @@
+.ai-card{
+    width: 280px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #fff;
+    font-family: serif;
+}
+
+.ai-card .tag{
+    color: #d1d1d1;
+    font-size: 12px;
+}
+
+.ai-card .title{
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.ai-card .desc{
+    color: #666;
+    font-size: 14px;
+}
+
+.ai-card .btn{
+    background: #0000ff;
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}

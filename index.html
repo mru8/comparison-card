@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vs Human Refactor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme-ai.css">
+    <link rel="stylesheet" href="theme-human.css">
+</head>
+<body>
+    <nav class="controls">
+        <button id="sideBySideBtn" class="active">Side-by-side</button>
+        <button id="stackBtn">Stack Mode(mobile)</button>
+    </nav>
+
+    <main id="mainContainer" class="comparison-container side-by-side">
+
+        <section class="pane ai-pane">
+            <header class="label">AI Generated (Raw)</header>
+            <div class="card-wrapper">
+                <div class="ai-card">
+                    <div class="tag">Feature 01</div>
+                    <div class="title">Cloud Sync</div>
+                    <div class="desc">Syncing your files now..</div>
+                    <div class="btn">Go</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pane human-pane">
+            <header class="label">Human Refined</header>
+            <div class="card-wrapper">
+                <article class="human-card">
+                    <span class="badge">Feature 01</span>
+                    <h3>Cloud Sync</h3>
+                    <p>Securely sync your files across all devices in real time.</p>
+                    <button type="button">Get Started</button>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

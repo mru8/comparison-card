@@ -1,0 +1,81 @@
+body{
+    background: #f1f5f9;
+    margin: 0;
+}
+
+.comparison-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    transition: all 30s ease;
+    /* transition: flex-direction 0.4s ease-in-out; */
+}
+
+.comparison-container.side-by-side {
+    flex-direction: row;
+}
+
+.pane{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.ai-pane{
+    background: #e2e8f0;
+    border-right: 2px dashed #cbd5e1;
+}
+
+.human-pane{
+    background: #f8fafc;
+}
+
+.label{
+    position: absolute;
+    top: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Desktop mode */
+@media (min-width: 768px) {
+    .comparison-container.side-by-side{
+        flex-direction: row;
+    }
+}
+
+.controls{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.controls button{
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid #6366f1;
+    background: white;
+    color: #6366f1;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.controls button.active{
+    background: #6366f1;
+    color: white;
+}

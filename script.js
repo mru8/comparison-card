@@ -18,27 +18,27 @@
 // aiPane.addEventListener('click', () => toggleView('ai'));
 // humanPane.addEventListener('click', () => toggleView('human'));
 
-const sideBySideBtn = document.getElementById('sideBySideBtn');
-const stackBtn = document.getElementById('stackBtn');
-const mainContainer = document.getElementById('mainContainer');
+// const sideBySideBtn = document.getElementById('sideBySideBtn');
+// const stackBtn = document.getElementById('stackBtn');
+// const mainContainer = document.getElementById('mainContainer');
 
-// Desktop View
-sideBySideBtn.addEventListener('click', () => {
-    mainContainer.classList.add('side-by-side');
-    mainContainer.classList.remove('stacked')
+// // Desktop View
+// sideBySideBtn.addEventListener('click', () => {
+//     mainContainer.classList.add('side-by-side');
+//     mainContainer.classList.remove('stacked')
 
-    sideBySideBtn.classList.add('active');
-    stackBtn.classList.remove('active');
-});
+//     sideBySideBtn.classList.add('active');
+//     stackBtn.classList.remove('active');
+// });
 
-// Mobile View
-stackBtn.addEventListener('click', () => {
-    mainContainer.classList.remove('side-by-side');
-    mainContainer.classList.add('stacked');
+// // Mobile View
+// stackBtn.addEventListener('click', () => {
+//     mainContainer.classList.remove('side-by-side');
+//     mainContainer.classList.add('stacked');
 
-    stackBtn.classList.add('active');
-    sideBySideBtn.classList.remove('active');
-});
+//     stackBtn.classList.add('active');
+//     sideBySideBtn.classList.remove('active');
+// });
 
 // Auto-detecting screen size
 window.addEventListener('resize', () => {
@@ -56,3 +56,22 @@ window.addEventListener('resize', () => {
 if (window.innerWidth < 768) {
     stackBtn.click();
 }
+
+function smoothToggle(mode) {
+    mainContainer.classList.add('switching');
+
+    setTimeout(() => {
+        if (mode === 'side') {
+            mainContainer.classList.add('side-by-side');
+            mainContainer.classList.remove('stacked');
+        } else {
+            mainContainer.classList.remove('side-by-side');
+            mainContainer.classList.add('stacked');
+        }
+
+        mainContainer.classList.remove('switching');
+    }, 200);
+}
+
+sideBySideBtn.addEventListener('click', () => smoothToggle('side'));
+stackBtn.addEventListener('click', () => smoothToggle('stack'));

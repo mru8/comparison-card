@@ -7,7 +7,7 @@ A side-by-side technical demonstration of the gap between **AI-generated output*
 While AI can generate functional code in seconds, it often lacks "contextual intelligence." This lab compares a **Raw AI component** (full of technical debt) against a **Human Refined version** (built with best practices) to highlight improvements in UX and code quality.
 
 ## Direct link
-link will be added here
+[Click here to open **AI vs Human** Comparison Card](https://mru8.github.io/comparison-card/)
 
 ## Tech Stack
 * **HTML5**: Semantic markup for better SEO and accessibility.
